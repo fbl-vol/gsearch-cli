@@ -1,0 +1,8 @@
+.DS_Store
+gsearch
+gsearch-cli
+dist/
+coverage/
+.env
+.env.*
+!.env.example
