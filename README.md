@@ -6,6 +6,24 @@ GSearch is the Danish geodata search API for addresses, house numbers, roads,
 postcodes, administrative geography, cadastral parcels, and place names. It is
 not Google Search, and it is not a full DAWA replacement.
 
+## Lifecycle and ownership
+
+**Classification: supported utility.** Maintainer: **Frederik Brunø Lottrup**
+(Pendio Engineering). The maintainer owns code review, dependency updates, and
+the validation baseline. This classification requires Engineering owner approval
+before retirement, archival, or a change to the support boundary.
+
+Agents may modify this repository after reading [`AGENTS.md`](AGENTS.md). Before
+submitting a change, run the credential-free baseline:
+
+```sh
+make validate
+```
+
+The baseline uses Go 1.22, as declared by `go.mod`; CI pins Go 1.22.12. It runs
+tests, `go vet`, and a build. Live GSearch calls, including `doctor`, require
+`GSEARCH_TOKEN` and are not part of CI.
+
 ## Install
 
 ```sh
