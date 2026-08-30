@@ -2,6 +2,15 @@
 
 This repo is a small CLI for SDFI/Dataforsyningen GSearch, not Google Search.
 
+## Operating Baseline
+
+- Lifecycle: supported utility. Maintainer: Frederik Brunø Lottrup (Pendio
+  Engineering); lifecycle changes require Engineering owner approval.
+- Runtime: Go 1.22, declared in `go.mod`; CI pins Go 1.22.12.
+- Entry point: this `AGENTS.md`; no shared foundation submodule is installed.
+- Required local validation: `make validate`. It is credential-free and must
+  remain so. Do not run live checks in CI.
+
 Rules for changes:
 
 - Keep credentials in `GSEARCH_TOKEN` or a secret manager. Never hardcode a real token.
