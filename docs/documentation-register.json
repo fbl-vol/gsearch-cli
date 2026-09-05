@@ -1,0 +1,9 @@
+{
+  "$schemaVersion": "2.0",
+  "product": "gsearch-cli",
+  "documents": [
+    {"path":"AGENTS.md","status":"current","authority":"normative","scope":"Repository safety, deterministic GSearch rules, and evidence routing.","owner":"Pendio engineering","reviewTrigger":"Instruction, API behavior, runtime, or lifecycle change.","validationMethod":"Workspace structural validation and make validate.","enforcementLevel":"Repository policy is normative."},
+    {"path":"README.md","status":"current","authority":"operational","scope":"CLI installation and usage.","owner":"Pendio engineering","reviewTrigger":"Flag, command, endpoint, installation, or ownership change.","validationMethod":"make validate and source review.","enforcementLevel":"Reviewed prose; code and tests are authoritative."},
+    {"path":"docs/documentation-register.json","status":"current","authority":"governance","scope":"Normative and operational documentation metadata.","owner":"Pendio engineering","reviewTrigger":"Documentation ownership, status, routing, or validation change.","validationMethod":"Workspace structural validation.","enforcementLevel":"Workspace structural checks."}
+  ]
+}

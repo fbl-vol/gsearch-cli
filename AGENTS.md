@@ -19,3 +19,8 @@ Rules for changes:
 - Use `husnummer` for building/access-address search and `adresse` for unit-level address search.
 - Spatial filters sent to GSearch must use EPSG:25832 coordinates.
 - GSearch does not replace DAWA reverse geocoding, `datavask`, BBR/BFE, history, replication, or bulk-download workflows.
+
+Read `go.mod`, `Makefile`, and the closest code and tests for implementation
+work. Read `README.md` for usage changes and `docs/documentation-register.json`
+only for documentation-governance changes. Do not default-read workspace plans
+or unrelated repository documentation.
