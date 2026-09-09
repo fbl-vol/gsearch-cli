@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+repository_root="$(git rev-parse --show-toplevel)"
+cd "$repository_root"
+unset $(git rev-parse --local-env-vars)
+
+mapfile -t ref_updates
+for update in "${ref_updates[@]}"; do
+  read -r local_ref _ remote_ref _ <<<"$update"
+  if [[ "$local_ref" != "(delete)" && "$remote_ref" == refs/heads/* ]]; then
+    make validate
+    exit 0
+  fi
+done
